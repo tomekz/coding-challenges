@@ -1,3 +1,6 @@
+import { Device } from '../domain/device';
+import { SignatureResponse } from '../domain/sign.service';
+
 export interface Signer {
-  sign: (dataToBeSigned: string[]) => string[] | Error;
+  sign: (device: Device, data: string) => SignatureResponse | Error;
 }
